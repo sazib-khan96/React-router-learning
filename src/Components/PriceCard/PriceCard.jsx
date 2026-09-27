@@ -12,7 +12,7 @@ const PriceCard = ({priceData}) => {
         <p>Flexible pricing plans designed to fit your needs, with powerful features and no hidden costs.</p>
         <div className=" lg:grid grid-cols-3 mt-8  mx-auto gap-5 ">
         {
-          price.map(cardItem => <PriceCardInfo cardItem={cardItem}></PriceCardInfo> )
+          price.map(cardItem => <PriceCardInfo cardItem={cardItem} key={cardItem.id}></PriceCardInfo> )
         }
        </div>  
        </div>
