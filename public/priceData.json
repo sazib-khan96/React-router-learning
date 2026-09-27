@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "plan": "Daily",
+    "package_name": "Basic",
+    "old_price": 10,
+    "discount": 20,
+    "final_price": 8,
+    "rating": 4.3,
+    "premium": false,
+    "features": [
+      "1 User",
+      "5 Projects",
+      "1 GB Storage",
+      "Basic Support"
+    ]
+  },
+  {
+    "id": 2,
+    "plan": "Monthly",
+    "package_name": "Premium",
+    "old_price": 50,
+    "discount": 30,
+    "final_price": 35,
+    "rating": 4.7,
+    "premium": true,
+    "features": [
+      "5 Users",
+      "Unlimited Projects",
+      "50 GB Storage",
+      "Priority Support",
+      "Advanced Analytics"
+    ]
+  },
+  {
+    "id": 3,
+    "plan": "Yearly",
+    "package_name": "Enterprise",
+    "old_price": 500,
+    "discount": 40,
+    "final_price": 300,
+    "rating": 4.9,
+    "premium": true,
+    "features": [
+      "Unlimited Users",
+      "Unlimited Projects",
+      "500 GB Storage",
+      "24/7 Premium Support",
+      "Advanced Analytics",
+      "Custom Integrations"
+    ]
+  }
+]
