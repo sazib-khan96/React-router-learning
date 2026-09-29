@@ -1,0 +1,6 @@
+li a.active{
+    background-color: aqua;
+}
+li{
+    transition: 0.6s all;
+}
