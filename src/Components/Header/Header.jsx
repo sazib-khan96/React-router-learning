@@ -1,34 +1,19 @@
-
-import {  NavLink } from "react-router-dom";
-import Button from "../Button/Button";
-
-import './Header.css'
-
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-
-
-    return (
-        <div>
-
-           
-            <header>
-                <nav className="bg-gray-200 p-3 flex justify-between items-center">
-                    <ul className="flex gap-5 font-semibold justify-center">
-                       <li><NavLink to="/">Home</NavLink></li>
-                       <li><NavLink to="/about">About</NavLink></li>
-                       <li><NavLink to="/project">Project</NavLink></li>
-                       <li><NavLink to="/contact">Contact</NavLink></li>
-                    </ul>
-                    <Button></Button>
-                </nav>
-                
-            </header>
-
-            
-            
-        </div>
-    );
+  return (
+    <div className="flex justify-center p-3 bg-gray-200">
+      <ul>
+        <li className="flex gap-5">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/project">Project</NavLink>
+          <NavLink to="/users">Users</NavLink>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default Header;
