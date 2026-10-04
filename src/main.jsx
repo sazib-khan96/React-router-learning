@@ -1,37 +1,34 @@
-import { StrictMode } from "react";
+import { Children, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./Pages/About";
+import Product from "./Pages/Product";
 import Root from "./Component/Root/Root";
-import Home from "./Component/Pages/Home";
-import Updates from "./Component/Pages/Updates";
-import Postes from './Component/Pages/Postes'
-import Addnew from './Component/Pages/Addnew'
-import Categories from "./Component/Pages/Categories";
-import Settings from "./Component/Pages/Settings";
+import Home from "./Pages/Home";
+import Faq from "./Pages/Faq";
+import Help from "./Pages/Help";
+import Contact from "./Pages/Contact";
 
-
-
+// Create A Root file
 const router = createBrowserRouter([
-  {path:'/', element: <Root></Root>,
-    children:[
-      {index:true, element:<Home></Home> },
-      {path : 'updates', element : <Updates></Updates>},
-      {path: 'postes' ,element: <Postes></Postes>},
-      {path: 'addnew' ,element: <Addnew></Addnew>},
-      {path: 'categories' ,element: <Categories></Categories>},
-      {path: 'settings' ,element: <Settings></Settings>},
-      
-    ]
-    
-   }
-])
-
-
+  {
+    path: "/",
+    Component: Root,
+    children: [
+      { index : true, Component: Home },
+      { path: "about", Component: About},
+      { path: "products", Component: Product },
+      { path: "faq", Component: Faq },
+      { path: "help", Component: Help},
+      { path: "contact", Component: Contact},
+    ],
+  },
+]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router ={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 );
