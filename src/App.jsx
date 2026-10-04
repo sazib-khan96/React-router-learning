@@ -1,20 +1,14 @@
 import "./App.css";
 
-
-
-import axios from "axios";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
+import Form from "./Component/Form";
 
 
 function App() {
  
   return (
     <div>
-      
+      <Form></Form>
      
-     <h1>hello react</h1>
 
     
     </div>
