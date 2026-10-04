@@ -11,6 +11,8 @@ import Faq from "./Pages/Faq";
 import Help from "./Pages/Help";
 import Contact from "./Pages/Contact";
 
+
+
 // Create A Root file
 const router = createBrowserRouter([
   {
@@ -19,7 +21,9 @@ const router = createBrowserRouter([
     children: [
       { index : true, Component: Home },
       { path: "about", Component: About},
-      { path: "products", Component: Product },
+      { path: "products", 
+        loader: ()=> fetch('https://dummyjson.com/products'),
+        Component: Product },
       { path: "faq", Component: Faq },
       { path: "help", Component: Help},
       { path: "contact", Component: Contact},
