@@ -14,9 +14,9 @@ import Settings from "./Component/Pages/Settings";
 
 
 const router = createBrowserRouter([
-  {path: '/' , element: <Root></Root>,
+  {path:'/', element: <Root></Root>,
     children:[
-      {path:'home', element:<Home></Home> },
+      {index:true, element:<Home></Home> },
       {path : 'updates', element : <Updates></Updates>},
       {path: 'postes' ,element: <Postes></Postes>},
       {path: 'addnew' ,element: <Addnew></Addnew>},
