@@ -14,56 +14,64 @@ import User from "./Pages/User";
 import General from "./Pages/General";
 import { Heading1 } from "lucide-react";
 import Postes from "./Pages/Postes";
-
-const userData = fetch('https://jsonplaceholder.typicode.com/users')
-.then(res => res.json())
+import PostDetail from "./Pages/PostDetail";
 
 
-// Loading for suspense 
-const loading = <div>
-  <h1>Data is Loading.........</h1>
-</div>
+const userData = fetch("https://jsonplaceholder.typicode.com/users").then(
+  (res) => res.json(),
+);
+
+// Loading for suspense
+const loading = (
+  <div>
+    <h1>Data is Loading.........</h1>
+  </div>
+);
 // Create A Root file
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
     children: [
-      { index : true,
-         Component: Home },
+      { index: true, Component: Home },
 
-      { path: "about",
-         Component: About},
+      { path: "about", Component: About },
 
-      { path: "products", 
-        loader: ()=> fetch('https://dummyjson.com/products'),
-        Component: Product },
-
-      { path: "faq", 
-        Component: Faq ,
-        children: [
-          {path: 'general' ,Component : General}
-        ]
+      {
+        path: "products",
+        loader: () => fetch("https://dummyjson.com/products"),
+        Component: Product,
       },
 
-      { path: "help", 
-        Component: Help},
+      {
+        path: "faq",
+        Component: Faq,
+        children: [{ path: "general", Component: General }],
+      },
 
-      { path: "contact",
-         Component: Contact},
+      { path: "help", Component: Help },
 
-      {path : 'user',
-        element:(
+      { path: "contact", Component: Contact },
+
+      {
+        path: "user",
+        element: (
           <Suspense fallback={loading}>
             <User userData={userData}></User>
           </Suspense>
-        )
+        ),
       },
-      {path:'post',
-        loader: () => fetch('https://jsonplaceholder.typicode.com/posts'),
-        Component: Postes
+      {
+        path: "post",
+        loader: () => fetch("https://jsonplaceholder.typicode.com/posts"),
+        Component: Postes,
       },
-      
+
+      {
+        path:'post/:postid',
+        loader : ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postid}`),
+        Component:PostDetail,
+      }
     ],
   },
 ]);
