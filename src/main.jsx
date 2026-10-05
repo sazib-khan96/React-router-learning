@@ -1,4 +1,4 @@
-import { Children, StrictMode } from "react";
+import { Children, StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -10,9 +10,17 @@ import Home from "./Pages/Home";
 import Faq from "./Pages/Faq";
 import Help from "./Pages/Help";
 import Contact from "./Pages/Contact";
+import User from "./Pages/User";
+import { Heading1 } from "lucide-react";
+
+const userData = fetch('https://jsonplaceholder.typicode.com/users')
+.then(res => res.json())
 
 
-
+// Loading for suspense 
+const loading = <div>
+  <h1>Data is Loading.........</h1>
+</div>
 // Create A Root file
 const router = createBrowserRouter([
   {
@@ -27,6 +35,13 @@ const router = createBrowserRouter([
       { path: "faq", Component: Faq },
       { path: "help", Component: Help},
       { path: "contact", Component: Contact},
+      {path : 'user' ,
+        element:(
+          <Suspense fallback={loading}>
+            <User userData={userData}></User>
+          </Suspense>
+        )
+      }
     ],
   },
 ]);
