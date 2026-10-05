@@ -15,6 +15,7 @@ import General from "./Pages/General";
 import { Heading1 } from "lucide-react";
 import Postes from "./Pages/Postes";
 import PostDetail from "./Pages/PostDetail";
+import ProductDeatail from "./Pages/ProductDeatail";
 
 
 const userData = fetch("https://jsonplaceholder.typicode.com/users").then(
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
         path: "products",
         loader: () => fetch("https://dummyjson.com/products"),
         Component: Product,
+      },
+      {
+        path: 'products/:id',
+        loader: ({params}) => fetch(`https://dummyjson.com/products/${params.id}`),
+        Component:ProductDeatail
       },
 
       {

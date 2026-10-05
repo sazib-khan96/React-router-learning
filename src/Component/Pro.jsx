@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Pro = ({item}) => {
+    const {id} = item
     const [show,setShow] = useState(false)
 
     
@@ -10,8 +12,10 @@ const Pro = ({item}) => {
             <h1>{item.title}</h1>
             <p>${item.price}</p>
             <div className='flex justify-between'>
-                <button className='p-2 border'>Buy Now</button>
-                <button onClick={() => setShow(!show)} className='p-2 bg-amber-300'>{show ? "Hide" : "Show"}</button>
+                <button className='p-2 border'>Buy Now{id}</button>
+                <NavLink to={`product${id}`}>
+                    <button onClick={() => setShow(!show)} className='p-2 bg-amber-300'>{show ? "Hide" : "Show"}</button>
+                </NavLink>
             </div>
         </div>
     );
