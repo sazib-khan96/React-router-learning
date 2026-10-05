@@ -11,7 +11,9 @@ import Faq from "./Pages/Faq";
 import Help from "./Pages/Help";
 import Contact from "./Pages/Contact";
 import User from "./Pages/User";
+import General from "./Pages/General";
 import { Heading1 } from "lucide-react";
+import Postes from "./Pages/Postes";
 
 const userData = fetch('https://jsonplaceholder.typicode.com/users')
 .then(res => res.json())
@@ -27,21 +29,41 @@ const router = createBrowserRouter([
     path: "/",
     Component: Root,
     children: [
-      { index : true, Component: Home },
-      { path: "about", Component: About},
+      { index : true,
+         Component: Home },
+
+      { path: "about",
+         Component: About},
+
       { path: "products", 
         loader: ()=> fetch('https://dummyjson.com/products'),
         Component: Product },
-      { path: "faq", Component: Faq },
-      { path: "help", Component: Help},
-      { path: "contact", Component: Contact},
-      {path : 'user' ,
+
+      { path: "faq", 
+        Component: Faq ,
+        children: [
+          {path: 'general' ,Component : General}
+        ]
+      },
+
+      { path: "help", 
+        Component: Help},
+
+      { path: "contact",
+         Component: Contact},
+
+      {path : 'user',
         element:(
           <Suspense fallback={loading}>
             <User userData={userData}></User>
           </Suspense>
         )
-      }
+      },
+      {path:'post',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/posts'),
+        Component: Postes
+      },
+      
     ],
   },
 ]);

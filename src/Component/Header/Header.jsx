@@ -16,6 +16,8 @@ const Header = () => {
             <NavLink to='/help'>Help</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
             <NavLink to='/user'>User</NavLink>
+            <NavLink to='/post'>Post</NavLink>
+           
         </nav>
         <div>
             <button className='border px-4 py-2 rounded-xl'>Order Now</button>
