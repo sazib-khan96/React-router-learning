@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+     const [pass,setpass] = useState('secret')
   //  const formHandle = (e) =>{
   //     e.preventDefault()
   //     const name = e.target.name.value
@@ -10,16 +11,22 @@ const Contact = () => {
   //  }
 
   const formAction = (event) => {
+
     const name = event.get("name");
+    if(name.length ==''){
+        alert('Please input your name')
+        return
+    }
     const email = event.get("email");
     const tel = event.get("tel");
-    
+
      if(tel.length < 11 || tel === ''){
        alert('plase input your 11 digit Number')
        return
     }
+    const password = event.get('password')
     const gender = event.get('gender')
-    console.log(name, email, tel,gender);
+    console.log(name, email, tel,gender,password);
   };
 
   return (
@@ -40,6 +47,8 @@ const Contact = () => {
             type="email"
             placeholder="Enter Email"
           />
+          <br />
+          <input className="border p-2 w-full" defaultValue={pass} onChange={()=> event.target} type="password" name="password" placeholder="Password" />
           <br />
           <input
             className="w-full border p-2 my-2"
