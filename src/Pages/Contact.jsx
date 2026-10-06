@@ -4,7 +4,9 @@ const Contact = () => {
  const formHandle = (e) =>{
     e.preventDefault()
     const name = e.target.name.value
-    console.log(name)
+    const email = e.target.email.value
+    const phone = e.target.tel.value
+    console.log(name,email,phone)
  }
 
 
@@ -15,9 +17,9 @@ const Contact = () => {
         <form onSubmit={formHandle}>
           <input className="w-full border p-2 my-2" name="name" type="text" placeholder="Enter Name" />
           <br />
-          <input className="w-full border p-2 my-2"  type="email" placeholder="Enter Email" />
+          <input className="w-full border p-2 my-2" name="email"  type="email" placeholder="Enter Email" />
           <br />
-          <input className="w-full border p-2 my-2"  type="tel" placeholder="Enter Phone" />
+          <input className="w-full border p-2 my-2" name='tel'  type="tel" placeholder="Enter Phone" />
           <br />
           <input className="px-4 py-3 border bg-amber-300" type="submit" value="Submit" />
         </form>
