@@ -1,20 +1,30 @@
 import React from "react";
 
 const Contact = () => {
- const formHandle = (e) =>{
-    e.preventDefault()
-    const name = e.target.name.value
-    const email = e.target.email.value
-    const phone = e.target.tel.value
-    console.log(name,email,phone)
- }
 
+//  const formHandle = (e) =>{
+//     e.preventDefault()
+//     const name = e.target.name.value
+//     const email = e.target.email.value
+//     const phone = e.target.tel.value
+//     console.log(name,email,phone)
+//  }
+
+
+const formAction =(event) =>{
+   
+    const name = event.get('name')
+    const email = event.get('email')
+    const tel = event.get('tel')
+    console.log(name,email,tel)
+   
+}
 
   return (
     <div>
       <h1>This is contact page</h1>
       <div className="w-6/12 mx-auto border p-3">
-        <form onSubmit={formHandle}>
+        <form action={formAction}>
           <input className="w-full border p-2 my-2" name="name" type="text" placeholder="Enter Name" />
           <br />
           <input className="w-full border p-2 my-2" name="email"  type="email" placeholder="Enter Email" />
