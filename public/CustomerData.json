@@ -1,0 +1,72 @@
+[
+  {
+    "id": "#TK-1001",
+    "title": "Login Issues - Can't Access Account",
+    "category": "Account",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "#TK-1002",
+    "title": "Payment Failed During Checkout",
+    "category": "Payment",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "#TK-1003",
+    "title": "Order Has Not Been Delivered Yet",
+    "category": "Order",
+    "priority": "High",
+    "status": "Pending"
+  },
+  {
+    "id": "#TK-1004",
+    "title": "Unable to Download Purchased Files",
+    "category": "Order",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "#TK-1005",
+    "title": "Creator Is Not Responding",
+    "category": "Creator",
+    "priority": "Medium",
+    "status": "Pending"
+  },
+  {
+    "id": "#TK-1006",
+    "title": "Requesting Refund for My Order",
+    "category": "Refund",
+    "priority": "High",
+    "status": "Resolved"
+  },
+  {
+    "id": "#TK-1007",
+    "title": "Received the Wrong Service",
+    "category": "Order",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "#TK-1008",
+    "title": "Account Verification Not Working",
+    "category": "Account",
+    "priority": "Medium",
+    "status": "Resolved"
+  },
+  {
+    "id": "#TK-1009",
+    "title": "Unable to Update Profile Information",
+    "category": "Account",
+    "priority": "Low",
+    "status": "Closed"
+  },
+  {
+    "id": "#TK-1010",
+    "title": "Need Help With My Recent Order",
+    "category": "General",
+    "priority": "Low",
+    "status": "Closed"
+  }
+]
