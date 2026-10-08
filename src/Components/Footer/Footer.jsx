@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Help = () => {
+const Footer = () => {
     return (
         <div>
-            <h1>This is Help page</h1>
+            <h1>This Is foorte</h1>
         </div>
     );
 };
 
-export default Help;
+export default Footer;

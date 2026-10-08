@@ -1,11 +1,12 @@
 import React from 'react';
 
-const SingalsProduct = () => {
+
+const Home = () => {
     return (
         <div>
-            
+           <h1>this is Hpme</h1>
         </div>
     );
 };
 
-export default SingalsProduct;
+export default Home;
