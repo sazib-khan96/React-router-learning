@@ -13,7 +13,7 @@ const SingalPost = () => {
     <div className="w-8/12 p-3 mt-8 mx-auto">
       <div >
         <h3>{id}</h3>
-        <h3>{title}</h3>
+        <h3 className="text-2xl mb-3">{title}</h3>
         <p>{body}</p>
       </div>
       <div className="mt-10">
