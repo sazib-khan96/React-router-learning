@@ -13,6 +13,7 @@ body {
     --bg:#dcdde1;
     --customBtn :#273c75;
     --btnHover:#192a56;
+    --activeColor:#00a8ff;
 
 }
 
@@ -27,10 +28,13 @@ body {
     background-color:var(--btnHover) ;
 }
 
-ul:hover{
-    color: var(--btnHover);
-}
+
 ul a.active{
-    color: var(--customBtn);
     font-weight: bold;
+    color: var(--activeColor);
+}
+
+.my_bg_color{
+    background-color: var(--customBtn);
+    color: var(--bg);
 }

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-2">
+    <header className="flex justify-between items-center p-2 my_bg_color">
         <div>
             <h1>CS—Ticket System</h1>      
         </div>

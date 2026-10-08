@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Blogs from "../Pages/Blogs/Blogs";
 import Help from "../Pages/Help/Help";
+import RankBoosting from '../Pages/RankBoosting/RankBoosting'
 
 
 
@@ -27,6 +28,10 @@ import Help from "../Pages/Help/Help";
       {
         path:'help',
         Component:Help
+      },
+      {
+        path:'Rank Boosting',
+        Component: RankBoosting,
       }
     ],
   },
