@@ -38,3 +38,7 @@ ul a.active{
     background-color: var(--customBtn);
     color: var(--bg);
 }
+
+.my_text_color{
+    color: var(--customBtn);
+}

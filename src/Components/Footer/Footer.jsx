@@ -4,7 +4,7 @@ import Services from '../ServicesItem/Services'
 
 const Footer = () => {
     return (
-        <div className='my_bg_color px-3 py-12 grid grid-cols-4 gap-8'>
+        <div className='my_bg_color px-3 py-12 grid grid-cols-4 gap-8 mt-8'>
            
            <div>
             <h3 className='mb-5'>CS — Ticket System</h3>
