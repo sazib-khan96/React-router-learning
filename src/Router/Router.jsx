@@ -5,6 +5,11 @@ import About from "../Pages/About/About";
 import Blogs from "../Pages/Blogs/Blogs";
 import Help from "../Pages/Help/Help";
 import RankBoosting from '../Pages/RankBoosting/RankBoosting'
+import SingalPost from '../Components/SingalPost/SingalPost'
+
+
+const posts = fetch('https://jsonplaceholder.typicode.com/posts')
+.then(res => res.json())
 
 
 
@@ -23,7 +28,13 @@ import RankBoosting from '../Pages/RankBoosting/RankBoosting'
       },
       {
         path:'blogs',
+        loader: () => posts,
         Component:Blogs
+      },
+      {
+        path:'/post/:postId',
+        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        Component:SingalPost
       },
       {
         path:'help',
