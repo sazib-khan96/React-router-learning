@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Task = ({task}) => {
+const Task = ({task,completeBtnhandle}) => {
 
 const {id,title,status,priority} = task
 
@@ -18,7 +18,7 @@ const priorityStatus = {
              <h4>{status}</h4>
            </div>
            <div className='flex justify-between gap-3'>
-            <button className='my_custom_btn'>Completed</button>
+            <button onClick={() => completeBtnhandle(task)} className='my_custom_btn'>Completed</button>
             <button className={`px-4 py-2 rounded ${priorityStatus[priority]}`}>{priority}</button>
            </div>
         </div>

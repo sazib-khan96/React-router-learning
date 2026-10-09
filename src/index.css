@@ -18,7 +18,7 @@ body {
 }
 
 .my_custom_btn{
-    background-color: var(--customBtn);
+    background-color: var(--activeColor);
     color: var(--bg);
     padding: 10px 25px;
     cursor: pointer;
